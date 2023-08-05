@@ -1,0 +1,42 @@
+---
+layout: default
+title: Work
+---
+
+<section class="container mx-auto pt-16 mb-16 lg:px-36 xl:px-44">
+  <div class="my-20 md:my-36 mx-3 xl:mx-auto max-w-3xl">
+    <h1 class="text-3xl md:text-[44px] font-bold pb-4 md:pb-8">
+      {{ page.title }}
+    </h1>
+
+    {% for post in site.categories.work %}
+    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
+      <div class="overflow-hidden rounded-md h-fit">
+        <img
+          src="/assets/img/{{ post.image }}"
+          alt="image"
+          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
+          onClick="location.href='{{ post.url }}'"
+        />
+      </div>
+      <div class="md:w-2/3">
+        <a href="{{ post.url }}" class="hover:text-teal-500">
+          <h2
+            class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
+          >
+            {{ post.title }}
+          </h2>
+        </a>
+        <p class="text-[#8695A4] my-4">
+          <span class="px-3 bg-[#142850] rounded-full font-bold text-white mr-3"
+            >{{ post.date | date_to_string }}</span
+          >
+          {{ post.tags | array_to_sentence_string }}
+        </p>
+        <p>{{ post.content | markdownify | strip_html | truncatewords: 30 }}</p>
+      </div>
+    </div>
+    <hr />
+    {% endfor %}
+  </div>
+</section>

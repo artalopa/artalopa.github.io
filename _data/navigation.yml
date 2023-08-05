@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Blog
+  link: /blog.html
+- name: Work
+  link: /work.html
+- name: Contact
+  link: javascript:void(0)

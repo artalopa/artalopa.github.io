@@ -1,0 +1,32 @@
+<script>
+  // fixed navbar
+  const header = document.querySelector("#fixed-nav");
+  const fixedNav = header.offsetTop;
+
+  if (window.scrollY > fixedNav) {
+    header.classList.add(["shadow-lg"]);
+  }
+
+  window.onscroll = function () {
+    const header = document.querySelector("#fixed-nav");
+    const fixedNav = header.offsetTop;
+
+    if (window.scrollY > fixedNav) {
+      header.classList.add(["shadow-lg"]);
+    } else {
+      header.classList.remove(["shadow-lg"]);
+    }
+  };
+
+  // contact link (scroll to footer)
+  $("ul.menu > li:last-child").click(function () {
+    console.log("bisa");
+    document.getElementById("footer").scrollIntoView();
+  });
+
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+</script>
