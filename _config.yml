@@ -5,10 +5,12 @@ baseurl: "artalopa.github.io"
 title: "Ryan Artalopa"
 
 plugins:
-  - jekyll-postcss
+  - jekyll-postcss-v2
 
 postcss:
   cache: false
+  script: node_modules/.bin/postcss
+  config: postcss.config.js
 
 exclude:
   - package.json
