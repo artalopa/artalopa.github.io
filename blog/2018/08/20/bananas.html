@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html
+  lang="en-US"
+  data-theme="light"
+  class="scroll-smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/artalopa.github.io/assets/css/main.css" />
+    <title>Bananas - Ryan Artalopa</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header id="fixed-nav" class="fixed top-0 left-0 w-full bg-base-100">
+  <div class="navbar container mx-auto max-w-5xl">
+    <div class="navbar-start">
+      <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
+    </div>
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal px-1 hidden lg:flex [&>li>a]:font-medium">
+        
+        <li>
+          <a
+            href="/"
+            class="text-xl "
+            >Home</a
+          >
+        </li>
+        
+        <li>
+          <a
+            href="/blog.html"
+            class="text-xl "
+            >Blog</a
+          >
+        </li>
+        
+        <li>
+          <a
+            href="/work.html"
+            class="text-xl "
+            >Work</a
+          >
+        </li>
+        
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="text-xl "
+            >Contact</a
+          >
+        </li>
+        
+      </ul>
+
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-12 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 [&>li>a]:font-medium"
+        >
+          
+          <li>
+            <a
+              href="/"
+              class="text-lg "
+              >Home</a
+            >
+          </li>
+          
+          <li>
+            <a
+              href="/blog.html"
+              class="text-lg "
+              >Blog</a
+            >
+          </li>
+          
+          <li>
+            <a
+              href="/work.html"
+              class="text-lg "
+              >Work</a
+            >
+          </li>
+          
+          <li>
+            <a
+              href="javascript:void(0)"
+              class="text-lg "
+              >Contact</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- Navbar end -->
+
+    <article class="container mx-auto pt-16 lg:px-36 xl:px-44">
+  <div class="mt-10 md:mt-16 mx-3 xl:mx-auto max-w-3xl">
+    <h1 class="capitalize text-3xl md:text-4xl font-bold">Bananas</h1>
+
+    <p class="text-[#8695A4] my-4 flex">
+      <span
+        id="post-date"
+        class="h-fit px-3 bg-[#142850] rounded-full font-bold text-white mr-3 hidden"
+        >20 Aug 2018</span
+      >
+      Fruit, Banana, Yellow, and Minion
+    </p>
+
+    <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+<p>In some countries, bananas used for cooking may be called “plantains”,
+distinguishing them from dessert bananas. The fruit is variable in size,
+color, and firmness, but is usually elongated and curved, with soft
+flesh rich in starch covered with a rind, which may be green, yellow,
+red, purple, or brown when ripe.</p>
+
+<p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+<p>In some countries, bananas used for cooking may be called “plantains”,
+distinguishing them from dessert bananas. The fruit is variable in size,
+color, and firmness, but is usually elongated and curved, with soft
+flesh rich in starch covered with a rind, which may be green, yellow,
+red, purple, or brown when ripe.</p>
+
+<p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+<p>In some countries, bananas used for cooking may be called “plantains”,
+distinguishing them from dessert bananas. The fruit is variable in size,
+color, and firmness, but is usually elongated and curved, with soft
+flesh rich in starch covered with a rind, which may be green, yellow,
+red, purple, or brown when ripe.</p>
+
+  </div>
+</article>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="pt-12 pb-14 text-center">
+  <div class="flex w-fit mx-auto gap-5 mb-7">
+    <img src="/assets/img/fb.svg" alt="fb" />
+    <img src="/assets/img/insta.svg" alt="insta" />
+    <img src="/assets/img/twitter.svg" alt="twitter" />
+    <img src="/assets/img/Linkedin.svg" alt="linkedin.svg" />
+  </div>
+  <p>Copyright ©2023 All rights reserved</p>
+</footer>
+
+    <!-- Footer end -->
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+  // fixed navbar
+  const header = document.querySelector("#fixed-nav");
+  const fixedNav = header.offsetTop;
+
+  if (window.scrollY > fixedNav) {
+    header.classList.add(["shadow-lg"]);
+  }
+
+  window.onscroll = function () {
+    const header = document.querySelector("#fixed-nav");
+    const fixedNav = header.offsetTop;
+
+    if (window.scrollY > fixedNav) {
+      header.classList.add(["shadow-lg"]);
+    } else {
+      header.classList.remove(["shadow-lg"]);
+    }
+  };
+
+  // contact link (scroll to footer)
+  $("ul.menu > li:last-child").click(function () {
+    console.log("bisa");
+    document.getElementById("footer").scrollIntoView();
+  });
+
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+</script>
+
+  </body>
+</html>
