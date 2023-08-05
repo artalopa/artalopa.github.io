@@ -1,5 +1,7 @@
-url: ""
-baseurl: ""
+# _config.yml
+
+url: "https://artalopa.github.io"
+baseurl: "artalopa.github.io"
 title: "Ryan Artalopa"
 
 plugins:
