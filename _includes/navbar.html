@@ -1,4 +1,4 @@
-<header id="fixed-nav" class="fixed top-0 left-0 w-full bg-base-100">
+<header id="fixed-nav" class="fixed top-0 left-0 z-50 w-full bg-base-100">
   <div class="navbar container mx-auto max-w-5xl">
     <div class="navbar-start">
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
@@ -9,7 +9,7 @@
         <li>
           <a
             href="{{ item.link }}"
-            class="text-xl {% if page.url == item.link %} text-teal-500 {% endif %}"
+            class="text-lg hover:text-teal-500 {% if page.url == item.link %} text-teal-500 {% endif %}"
             >{{ item.name }}</a
           >
         </li>
@@ -41,7 +41,7 @@
           <li>
             <a
               href="{{ item.link }}"
-              class="text-lg {% if page.url == item.link %} text-teal-500 {% endif %}"
+              class="text-lg hover:text-teal-500 {% if page.url == item.link %} text-teal-500 {% endif %}"
               >{{ item.name }}</a
             >
           </li>

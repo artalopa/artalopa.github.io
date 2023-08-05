@@ -19,14 +19,14 @@ title: Portfolio
         veniam consequat sunt nostrud amet.
       </p>
       <a
-        class="btn rounded-md bg-teal-500 hover:bg-teal-600 capitalize text-white text-xl"
+        class="btn rounded-md bg-teal-500 hover:bg-teal-600 capitalize text-base-100 text-xl"
         >Button</a
       >
     </div>
     <div class="md:w-5/12">
       <img
-        class="w-[170px] md:w-[247px] mx-auto md:mx-0 md:float-right my-11 md:my-0"
-        src="./assets/img/Header.png"
+        class="w-[170px] md:w-[247px] mx-auto md:mx-0 md:float-right my-11 md:my-0 rounded-full"
+        src="./assets/img/pp.png"
         alt="photo"
       />
     </div>
@@ -58,7 +58,7 @@ title: Portfolio
           <p class="mb-3 md:my-4 flex">
             <span class="mr-3">{{ post.date | date_to_string }}</span>
 
-            <span class="text-[#8695A4] pl-3 border-l border-l-black"
+            <span class="text-[#8695A4] pl-3 border-l border-l-base-content"
               >{{ post.tags | array_to_sentence_string }}</span
             >
           </p>
@@ -96,7 +96,8 @@ title: Portfolio
           <h3 class="font-bold text-[24px] md:text-[30px]">{{ post.title }}</h3>
         </a>
         <p class="text-[#8695A4] my-4">
-          <span class="px-3 bg-[#142850] rounded-full font-bold text-white mr-3"
+          <span
+            class="px-3 bg-base-content rounded-full font-bold text-base-100 mr-3"
             >{{ post.date | date_to_string }}</span
           >
           {{ post.tags | array_to_sentence_string }}
@@ -107,57 +108,9 @@ title: Portfolio
     <hr />
     {% endfor %}
 
-    <!-- <div class="flex flex-wrap md:flex-nowrap gap-5 w-full mt-4 mb-4">
-      <img
-        class="w-full md:w-[248px] md:h-[180px] rounded-md"
-        src="./assets/img/Works-1.png"
-        alt="image"
-      />
-      <div class="">
-        <h3 class="font-bold text-[24px] md:text-[30px]">
-          Designing Dashboards
-        </h3>
-        <p class="text-[#8695A4] my-4">
-          <span class="px-3 bg-[#142850] rounded-full font-bold text-white mr-3"
-            >2020</span
-          >
-          Dashboard
-        </p>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </p>
-      </div>
-    </div>
-    <hr />
-    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full mt-4 mb-4">
-      <img
-        class="w-full md:w-[248px] md:h-[180px] rounded-md"
-        src="./assets/img/Works-1.png"
-        alt="image"
-      />
-      <div class="">
-        <h3 class="font-bold text-[24px] md:text-[30px]">
-          Designing Dashboards
-        </h3>
-        <p class="text-[#8695A4] my-4">
-          <span class="px-3 bg-[#142850] rounded-full font-bold text-white mr-3"
-            >2020</span
-          >
-          Dashboard
-        </p>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </p>
-      </div>
-    </div>
-    <hr /> -->
     <div class="text-center">
       <a
-        class="btn bg-teal-500 hover:bg-teal-600 text-white capitalize my-7"
+        class="btn bg-teal-500 hover:bg-teal-600 text-base-100 capitalize my-7"
         href="/work.html"
         >View all</a
       >
