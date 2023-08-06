@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <title>Lorem ipsum dolor sit amet  - Ryan Artalopa</title>
+    <title>First Post - Ryan Artalopa</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
   <body>
@@ -17,7 +18,12 @@
     <div class="navbar-start">
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end lg:flex-row-reverse lg:justify-start">
+      <input
+        type="checkbox"
+        id="dark-mode-toggle"
+        class="toggle mb-0.5 lg:ml-5"
+      />
       <ul class="menu menu-horizontal px-1 hidden lg:flex [&>li>a]:font-medium">
         
         <li>
@@ -54,7 +60,7 @@
         
       </ul>
 
-      <div class="dropdown">
+      <div class="dropdown pt-[6px]">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -118,30 +124,35 @@
 
     <article class="container mx-auto pt-16 lg:px-36 xl:px-44">
   <div class="mt-10 md:mt-16 mx-3 xl:mx-auto max-w-3xl">
-    <h1 class="capitalize text-3xl md:text-4xl font-bold">Lorem ipsum dolor sit amet </h1>
+    <h1 class="capitalize text-3xl md:text-4xl font-bold">First Post</h1>
 
-    <p class="text-[#8695A4] my-4 flex">
+    <p class="text-[#8695A4] mt-5 mb-6 flex">
       <span
         id="post-date"
         class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-        >22 Aug 2018</span
+        >05 Aug 2023</span
       >
-      Fruit
+      Article
     </p>
 
-    <p><img src="/assets/img/Works-1.png" alt="My helpful screenshot" /></p>
-
-<p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the
-edible berry of several species of woody vines in the genus Actinidia.</p>
-
-<p>The most common cultivar group of kiwifruit is oval, about the size of
-a large hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm
-(1.8–2.2 in) in diameter). It has a fibrous, dull greenish-brown skin
-and bright green or golden flesh with rows of tiny, black, edible
-seeds. The fruit has a soft texture, with a sweet and unique flavor.</p>
-
+    <div id="post-content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas eaque quae laboriosam. Dolore necessitatibus ullam minus ea dolores debitis, itaque fuga expedita deleniti voluptas. Repudiandae labore dolorem aliquam eum placeat, minima expedita blanditiis nihil in quia enim sed, inventore quis laborum! Omnis quas fugit labore aperiam incidunt minus sapiente.</p>
+</div>
   </div>
 </article>
+
+<script>
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+
+  // detailed post page css
+  var p = $("#post-content p");
+  var img = $("#post-content img");
+  p.addClass("my-5");
+  img.addClass(["rounded-md", "mx-auto", "w-full", "max-w-md"]);
+</script>
 
 
     <!-- Footer -->
@@ -196,8 +207,6 @@ seeds. The fruit has a soft texture, with a sweet and unique flavor.</p>
 
     <!-- Footer end -->
 
-    <!-- Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
   // fixed navbar
   const header = document.querySelector("#fixed-nav");
@@ -220,15 +229,50 @@ seeds. The fruit has a soft texture, with a sweet and unique flavor.</p>
 
   // contact link (scroll to footer)
   $("ul.menu > li:last-child").click(function () {
-    console.log("bisa");
     document.getElementById("footer").scrollIntoView();
   });
 
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  // theme switcher
+  // if (
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches
+  // ) {
+  //   // dark mode
+  //   $("#dark-mode-toggle").prop("checked", true);
+  // }
+
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (event) => {
+  //     var themeValue = event.matches ? "dark" : "light";
+
+  //     if (themeValue == "dark") {
+  //       $("#dark-mode-toggle").prop("checked", true);
+  //     } else if (themeValue == "light") {
+  //       $("#dark-mode-toggle").prop("checked", false);
+  //     }
+  //   });
+
+  var theme = localStorage.getItem("theme");
+
+  if (theme == "dark") {
+    $("html").attr("data-theme", "dark");
+    $("#dark-mode-toggle").attr("checked", true);
+  } else {
+    $("html").attr("data-theme", "light");
+    $("#dark-mode-toggle").attr("checked", false);
+  }
+
+  // theme switcher
+  $("#dark-mode-toggle").click(function () {
+    if (theme == "dark") {
+      localStorage.setItem("theme", "light");
+      $("html").attr("data-theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+      $("html").attr("data-theme", "dark");
+    }
+  });
 </script>
 
   </body>

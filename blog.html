@@ -8,6 +8,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
   <body>
@@ -17,7 +18,12 @@
     <div class="navbar-start">
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end lg:flex-row-reverse lg:justify-start">
+      <input
+        type="checkbox"
+        id="dark-mode-toggle"
+        class="toggle mb-0.5 lg:ml-5"
+      />
       <ul class="menu menu-horizontal px-1 hidden lg:flex [&>li>a]:font-medium">
         
         <li>
@@ -54,7 +60,7 @@
         
       </ul>
 
-      <div class="dropdown">
+      <div class="dropdown pt-[6px]">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,20 +130,19 @@
     
     <div class="my-6 md:mt-8 md:mb-7">
       <a
-        href="/blog/2018/08/22/Lorem-ipsum-dolor-sit-amet.html"
+        href="/blog/2023/08/05/first-post.html"
         class="text-[26px] md:text-3xl font-medium hover:text-teal-500"
       >
-        <h2 class="inline-block capitalize">Lorem ipsum dolor sit amet </h2>
+        <h2 class="inline-block capitalize">First Post</h2>
       </a>
       <p class="mb-3 md:my-4 flex">
-        <span class="mr-3">22 Aug 2018</span>
+        <span class="mr-3">05 Aug 2023</span>
 
         <span class="text-[#8695A4] pl-3 border-l border-l-base-content"
-          >Fruit</span
+          >Article</span
         >
       </p>
-      <p><p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the
-edible berry of several species of woody vines in the genus Actinidia.</p>
+      <p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas eaque quae laboriosam. Dolore necessitatibus ullam minus ea dolores debitis, itaque fuga expedita deleniti voluptas. Repudiandae labore dolorem aliquam eum placeat, minima expedita blanditiis nihil in quia enim sed, inventore quis laborum! Omnis quas fugit labore aperiam incidunt minus sapiente.</p>
 </p>
     </div>
     <hr />
@@ -198,8 +203,6 @@ edible berry of several species of woody vines in the genus Actinidia.</p>
 
     <!-- Footer end -->
 
-    <!-- Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
   // fixed navbar
   const header = document.querySelector("#fixed-nav");
@@ -222,15 +225,50 @@ edible berry of several species of woody vines in the genus Actinidia.</p>
 
   // contact link (scroll to footer)
   $("ul.menu > li:last-child").click(function () {
-    console.log("bisa");
     document.getElementById("footer").scrollIntoView();
   });
 
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  // theme switcher
+  // if (
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches
+  // ) {
+  //   // dark mode
+  //   $("#dark-mode-toggle").prop("checked", true);
+  // }
+
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (event) => {
+  //     var themeValue = event.matches ? "dark" : "light";
+
+  //     if (themeValue == "dark") {
+  //       $("#dark-mode-toggle").prop("checked", true);
+  //     } else if (themeValue == "light") {
+  //       $("#dark-mode-toggle").prop("checked", false);
+  //     }
+  //   });
+
+  var theme = localStorage.getItem("theme");
+
+  if (theme == "dark") {
+    $("html").attr("data-theme", "dark");
+    $("#dark-mode-toggle").attr("checked", true);
+  } else {
+    $("html").attr("data-theme", "light");
+    $("#dark-mode-toggle").attr("checked", false);
+  }
+
+  // theme switcher
+  $("#dark-mode-toggle").click(function () {
+    if (theme == "dark") {
+      localStorage.setItem("theme", "light");
+      $("html").attr("data-theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+      $("html").attr("data-theme", "dark");
+    }
+  });
 </script>
 
   </body>
