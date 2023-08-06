@@ -6,7 +6,7 @@ layout: default
   <div class="mt-10 md:mt-16 mx-3 xl:mx-auto max-w-3xl">
     <h1 class="capitalize text-3xl md:text-4xl font-bold">{{ page.title }}</h1>
 
-    <p class="text-[#8695A4] my-4 flex">
+    <p class="text-[#8695A4] mt-5 mb-6 flex">
       <span
         id="post-date"
         class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
@@ -15,6 +15,20 @@ layout: default
       {{ page.tags | array_to_sentence_string }}
     </p>
 
-    {{ content }}
+    <div id="post-content">{{ content }}</div>
   </div>
 </article>
+
+<script>
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+
+  // detailed post page css
+  var p = $("#post-content p");
+  var img = $("#post-content img");
+  p.addClass("my-5");
+  img.addClass(["rounded-md", "mx-auto", "w-full", "max-w-md"]);
+</script>
