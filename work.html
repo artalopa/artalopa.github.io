@@ -264,10 +264,10 @@
 
   if (theme == "dark") {
     $("html").attr("data-theme", "dark");
-    $("#dark-mode-toggle").attr("checked", true);
+    $("#dark-mode-toggle").prop("checked", true);
   } else {
     $("html").attr("data-theme", "light");
-    $("#dark-mode-toggle").attr("checked", false);
+    $("#dark-mode-toggle").prop("checked", false);
   }
 
   // theme switcher
