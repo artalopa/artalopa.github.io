@@ -146,7 +146,11 @@ title: Portfolio
           >
 
           {% if post.projectLink %}
-          <a href="{{ post.projectLink }}" class="flex items-center">
+          <a
+            href="{{ post.projectLink }}"
+            target="_blank"
+            class="flex items-center"
+          >
             Open
             <svg
               xmlns="http://www.w3.org/2000/svg"
