@@ -140,6 +140,7 @@ title: Portfolio
         </a>
         <p class="text-[#8695A4] my-4">
           <span
+            id="post-date"
             class="px-3 bg-base-content rounded-full font-bold text-base-100 mr-3"
             >{{ post.date | date_to_string }}</span
           >
@@ -161,3 +162,11 @@ title: Portfolio
   </div>
 </section>
 <!-- Work end -->
+
+<!-- <script>
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+</script> -->

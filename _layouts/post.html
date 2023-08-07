@@ -4,6 +4,17 @@ layout: default
 
 <article class="container mx-auto pt-16 lg:px-36 xl:px-44">
   <div class="mt-10 md:mt-16 mx-3 xl:mx-auto max-w-3xl">
+    <div class="text-sm breadcrumbs mb-2">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/{{ page.categories }}" class="capitalize"
+            >{{ page.categories }}</a
+          >
+        </li>
+        <li>Add Document</li>
+      </ul>
+    </div>
     <h1 class="capitalize text-3xl md:text-4xl font-bold">{{ page.title }}</h1>
 
     <p class="text-[#8695A4] mt-5 mb-6 flex">
@@ -20,13 +31,13 @@ layout: default
 </article>
 
 <script>
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  // // post date on detailed post page
+  // var text = $("#post-date").html();
+  // var year = text.split(" ")[2];
+  // $("#post-date").html(year);
+  // $("#post-date").removeClass("hidden");
 
-  // detailed post page css
+  // post content css
   var p = $("#post-content p");
   var img = $("#post-content img");
   p.addClass("my-5");
