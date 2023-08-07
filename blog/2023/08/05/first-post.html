@@ -22,23 +22,6 @@
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
     </div>
     <div class="navbar-end lg:flex-row-reverse lg:justify-start">
-      <input
-        type="checkbox"
-        id="dark-mode-toggle"
-        class="toggle mb-0.5 lg:ml-5"
-        checked="checked"
-      />
-      <script>
-        var theme = localStorage.getItem("theme");
-
-        if (theme == "dark") {
-          $("html").attr("data-theme", "dark");
-          $("#dark-mode-toggle").attr("checked", true);
-        } else {
-          $("html").attr("data-theme", "light");
-          $("#dark-mode-toggle").attr("checked", false);
-        }
-      </script>
       <ul class="menu menu-horizontal px-1 hidden lg:flex [&>li>a]:font-medium">
         
         <li>
@@ -152,13 +135,14 @@
     </div>
     <h1 class="capitalize text-3xl md:text-4xl font-bold">First Post</h1>
 
-    <p class="text-[#8695A4] mt-5 mb-6 flex">
+    <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
       <span
         id="post-date"
         class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
         >05 Aug 2023</span
       >
-      Article
+
+       #Article
     </p>
 
     <div id="post-content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas eaque quae laboriosam. Dolore necessitatibus ullam minus ea dolores debitis, itaque fuga expedita deleniti voluptas. Repudiandae labore dolorem aliquam eum placeat, minima expedita blanditiis nihil in quia enim sed, inventore quis laborum! Omnis quas fugit labore aperiam incidunt minus sapiente.</p>
@@ -256,48 +240,6 @@
   // contact link (scroll to footer)
   $("ul.menu > li:last-child").click(function () {
     document.getElementById("footer").scrollIntoView();
-  });
-
-  // theme switcher
-  // if (
-  //   window.matchMedia &&
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches
-  // ) {
-  //   // dark mode
-  //   $("#dark-mode-toggle").prop("checked", true);
-  // }
-
-  // window
-  //   .matchMedia("(prefers-color-scheme: dark)")
-  //   .addEventListener("change", (event) => {
-  //     var themeValue = event.matches ? "dark" : "light";
-
-  //     if (themeValue == "dark") {
-  //       $("#dark-mode-toggle").prop("checked", true);
-  //     } else if (themeValue == "light") {
-  //       $("#dark-mode-toggle").prop("checked", false);
-  //     }
-  //   });
-
-  // var theme = localStorage.getItem("theme");
-
-  // if (theme == "dark") {
-  //   $("html").attr("data-theme", "dark");
-  //   $("#dark-mode-toggle").attr("checked", true);
-  // } else {
-  //   $("html").attr("data-theme", "light");
-  //   $("#dark-mode-toggle").attr("checked", false);
-  // }
-
-  // theme switcher
-  $("#dark-mode-toggle").click(function () {
-    if (theme == "dark") {
-      localStorage.setItem("theme", "light");
-      $("html").attr("data-theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
-      $("html").attr("data-theme", "dark");
-    }
   });
 
   // post date on detailed post page

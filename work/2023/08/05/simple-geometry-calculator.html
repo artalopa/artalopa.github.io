@@ -22,23 +22,6 @@
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
     </div>
     <div class="navbar-end lg:flex-row-reverse lg:justify-start">
-      <input
-        type="checkbox"
-        id="dark-mode-toggle"
-        class="toggle mb-0.5 lg:ml-5"
-        checked="checked"
-      />
-      <script>
-        var theme = localStorage.getItem("theme");
-
-        if (theme == "dark") {
-          $("html").attr("data-theme", "dark");
-          $("#dark-mode-toggle").attr("checked", true);
-        } else {
-          $("html").attr("data-theme", "light");
-          $("#dark-mode-toggle").attr("checked", false);
-        }
-      </script>
       <ul class="menu menu-horizontal px-1 hidden lg:flex [&>li>a]:font-medium">
         
         <li>
@@ -152,13 +135,35 @@
     </div>
     <h1 class="capitalize text-3xl md:text-4xl font-bold">Simple Geometry Calculator</h1>
 
-    <p class="text-[#8695A4] mt-5 mb-6 flex">
+    <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
       <span
         id="post-date"
         class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
         >05 Aug 2023</span
       >
-      Javascript
+
+      
+      <a href="/bangunRuang" class="flex items-center">
+        Open
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5 ml-1 mr-3"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
+            clip-rule="evenodd"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+       #Javascript
     </p>
 
     <div id="post-content"><p>This is just a simple app to to calculate the volume and area of ​​a geometry. For now, the geometries are just right circular cone, sphere, right circular cylinder, cube, and rectangular solid. I hope i can add more geometries soon.</p>
@@ -260,48 +265,6 @@
   // contact link (scroll to footer)
   $("ul.menu > li:last-child").click(function () {
     document.getElementById("footer").scrollIntoView();
-  });
-
-  // theme switcher
-  // if (
-  //   window.matchMedia &&
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches
-  // ) {
-  //   // dark mode
-  //   $("#dark-mode-toggle").prop("checked", true);
-  // }
-
-  // window
-  //   .matchMedia("(prefers-color-scheme: dark)")
-  //   .addEventListener("change", (event) => {
-  //     var themeValue = event.matches ? "dark" : "light";
-
-  //     if (themeValue == "dark") {
-  //       $("#dark-mode-toggle").prop("checked", true);
-  //     } else if (themeValue == "light") {
-  //       $("#dark-mode-toggle").prop("checked", false);
-  //     }
-  //   });
-
-  // var theme = localStorage.getItem("theme");
-
-  // if (theme == "dark") {
-  //   $("html").attr("data-theme", "dark");
-  //   $("#dark-mode-toggle").attr("checked", true);
-  // } else {
-  //   $("html").attr("data-theme", "light");
-  //   $("#dark-mode-toggle").attr("checked", false);
-  // }
-
-  // theme switcher
-  $("#dark-mode-toggle").click(function () {
-    if (theme == "dark") {
-      localStorage.setItem("theme", "light");
-      $("html").attr("data-theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
-      $("html").attr("data-theme", "dark");
-    }
   });
 
   // post date on detailed post page
