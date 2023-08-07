@@ -13,7 +13,10 @@
 
   <body>
     <!-- Navbar -->
-    <header id="fixed-nav" class="fixed top-0 left-0 z-50 w-full bg-base-100">
+    <header
+  id="fixed-nav"
+  class="fixed top-0 left-0 z-50 w-full bg-base-100 bg-opacity-90 backdrop-blur-[8px]"
+>
   <div class="navbar container mx-auto max-w-5xl">
     <div class="navbar-start">
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
@@ -160,6 +163,7 @@
         </a>
         <p class="text-[#8695A4] my-4">
           <span
+            id="post-date"
             class="px-3 bg-base-content rounded-full font-bold text-base-100 mr-3"
             >05 Aug 2023</span
           >
@@ -172,6 +176,14 @@
     
   </div>
 </section>
+
+<!-- <script>
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
+</script> -->
 
 
     <!-- Footer -->
@@ -292,6 +304,12 @@
       $("html").attr("data-theme", "dark");
     }
   });
+
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
 </script>
 
   </body>

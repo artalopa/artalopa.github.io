@@ -13,7 +13,10 @@
 
   <body>
     <!-- Navbar -->
-    <header id="fixed-nav" class="fixed top-0 left-0 z-50 w-full bg-base-100">
+    <header
+  id="fixed-nav"
+  class="fixed top-0 left-0 z-50 w-full bg-base-100 bg-opacity-90 backdrop-blur-[8px]"
+>
   <div class="navbar container mx-auto max-w-5xl">
     <div class="navbar-start">
       <a href="/" class="text-2xl font-extrabold ml-4">Artalopa</a>
@@ -136,6 +139,17 @@
 
     <article class="container mx-auto pt-16 lg:px-36 xl:px-44">
   <div class="mt-10 md:mt-16 mx-3 xl:mx-auto max-w-3xl">
+    <div class="text-sm breadcrumbs mb-2">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>
+          <a href="/blog" class="capitalize"
+            >blog</a
+          >
+        </li>
+        <li>Add Document</li>
+      </ul>
+    </div>
     <h1 class="capitalize text-3xl md:text-4xl font-bold">First Post</h1>
 
     <p class="text-[#8695A4] mt-5 mb-6 flex">
@@ -153,13 +167,13 @@
 </article>
 
 <script>
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  // // post date on detailed post page
+  // var text = $("#post-date").html();
+  // var year = text.split(" ")[2];
+  // $("#post-date").html(year);
+  // $("#post-date").removeClass("hidden");
 
-  // detailed post page css
+  // post content css
   var p = $("#post-content p");
   var img = $("#post-content img");
   p.addClass("my-5");
@@ -285,6 +299,12 @@
       $("html").attr("data-theme", "dark");
     }
   });
+
+  // post date on detailed post page
+  var text = $("#post-date").html();
+  var year = text.split(" ")[2];
+  $("#post-date").html(year);
+  $("#post-date").removeClass("hidden");
 </script>
 
   </body>
