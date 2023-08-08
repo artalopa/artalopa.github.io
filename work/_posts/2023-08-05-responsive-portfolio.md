@@ -5,7 +5,7 @@ image: repo.png
 projectLink: /repo
 ---
 
-This is a responsive portfolio landing page built with Tailwind CSS. The design is inspired from one of many excellent designs on dribbble.com
+This is a responsive portfolio landing page built with Tailwind CSS. The design is inspired from one of many excellent designs on dribbble.com.
 
 ![screenshot](/assets/img/work/repo.png)
 
