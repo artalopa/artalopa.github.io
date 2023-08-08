@@ -89,8 +89,8 @@ title: Portfolio
         >
       </div>
       <div class="flex flex-wrap md:flex-nowrap gap-5">
-        {% for post in site.categories.blog %} {% if forloop.index0 == 2 %} {%
-        break %} {% endif %}
+        {% for post in site.categories.blog reversed %} {% if forloop.index0 ==
+        2 %} {% break %} {% endif %}
         <div class="p-6 bg-base-100 rounded-md shadow-md">
           <a href="{{ post.url }}" class="hover:text-teal-500">
             <h3 class="font-bold text-[22px] md:text-[26px] inline-block">
@@ -124,8 +124,8 @@ title: Portfolio
       Featured works
     </h2>
 
-    {% for post in site.categories.work %} {% if forloop.index0 == 3 %} {% break
-    %} {% endif %}
+    {% for post in site.categories.work reversed %} {% if forloop.index0 == 3 %}
+    {% break %} {% endif %}
     <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4">
       <div class="overflow-hidden rounded-md h-fit">
         <img
@@ -141,8 +141,7 @@ title: Portfolio
         </a>
         <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
           <span
-            id="post-date"
-            class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
+            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
             >{{ post.date | date_to_string }}</span
           >
 
@@ -189,11 +188,3 @@ title: Portfolio
   </div>
 </section>
 <!-- Work end -->
-
-<!-- <script>
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
-</script> -->
