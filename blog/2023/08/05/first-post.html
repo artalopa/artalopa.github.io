@@ -137,8 +137,7 @@
 
     <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
       <span
-        id="post-date"
-        class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
+        class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
         >05 Aug 2023</span
       >
 
@@ -184,12 +183,6 @@
 </article>
 
 <script>
-  // // post date on detailed post page
-  // var text = $("#post-date").html();
-  // var year = text.split(" ")[2];
-  // $("#post-date").html(year);
-  // $("#post-date").removeClass("hidden");
-
   // post content css
   var p = $("#post-content p");
   var img = $("#post-content img");
@@ -276,10 +269,10 @@
   });
 
   // post date on detailed post page
-  var text = $("#post-date").html();
+  var text = $(".post-date").html();
   var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  $(".post-date").html(year);
+  $(".post-date").removeClass("hidden");
 </script>
 
   </body>

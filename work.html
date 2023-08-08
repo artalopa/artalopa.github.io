@@ -130,14 +130,69 @@
     <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
       <div class="overflow-hidden rounded-md h-fit">
         <img
-          src="/assets/img/work/bangun-ruang.png"
+          src="/assets/img/work/repo.png"
           alt="image"
           class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
-          onClick="location.href='/work/2023/08/05/simple-geometry-calculator.html'"
+          onClick="location.href='/work/2023/08/05/responsive-portfolio.html'"
         />
       </div>
       <div class="md:w-2/3">
-        <a href="/work/2023/08/05/simple-geometry-calculator.html" class="hover:text-teal-500">
+        <a href="/work/2023/08/05/responsive-portfolio.html" class="hover:text-teal-500">
+          <h2
+            class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
+          >
+            Responsive Portfolio
+          </h2>
+        </a>
+        <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
+          <span
+            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
+            >05 Aug 2023</span
+          >
+
+          
+          <a
+            href="/repo"
+            target="_blank"
+            class="flex items-center"
+          >
+            Open
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5 ml-1 mr-3"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+           #TailwindCSS
+        </p>
+        <p>This is a responsive portfolio landing page built with Tailwind CSS. The design is inspired from one of many excellent designs on dribbble.com I downloaded the image file, then i...</p>
+      </div>
+    </div>
+    <hr />
+    
+    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
+      <div class="overflow-hidden rounded-md h-fit">
+        <img
+          src="/assets/img/work/bangun-ruang.png"
+          alt="image"
+          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
+          onClick="location.href='/work/2023/08/08/simple-geometry-calculator.html'"
+        />
+      </div>
+      <div class="md:w-2/3">
+        <a href="/work/2023/08/08/simple-geometry-calculator.html" class="hover:text-teal-500">
           <h2
             class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
           >
@@ -146,9 +201,8 @@
         </a>
         <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
           <span
-            id="post-date"
-            class="h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-            >05 Aug 2023</span
+            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
+            >08 Aug 2023</span
           >
 
           
@@ -185,14 +239,6 @@
     
   </div>
 </section>
-
-<!-- <script>
-  // post date on detailed post page
-  var text = $("#post-date").html();
-  var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
-</script> -->
 
 
     <!-- Footer -->
@@ -273,10 +319,10 @@
   });
 
   // post date on detailed post page
-  var text = $("#post-date").html();
+  var text = $(".post-date").html();
   var year = text.split(" ")[2];
-  $("#post-date").html(year);
-  $("#post-date").removeClass("hidden");
+  $(".post-date").html(year);
+  $(".post-date").removeClass("hidden");
 </script>
 
   </body>
