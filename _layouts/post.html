@@ -58,9 +58,15 @@ layout: default
 </article>
 
 <script>
+  // post date on detailed post page
+  var text = $(".post-date").html();
+  var year = text.split(" ")[2];
+  $(".post-date").html(year);
+  $(".post-date").removeClass("hidden");
+
   // post content css
   var p = $("#post-content p");
   var img = $("#post-content img");
   p.addClass("my-5");
-  img.addClass(["rounded-md", "mx-auto", "w-full", "max-w-md"]);
+  img.addClass(["rounded-md", "mx-auto", "w-full", "max-w-3xl"]);
 </script>
