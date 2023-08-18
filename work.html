@@ -105,7 +105,7 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 [&>li>a]:font-medium"
+          class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 [&>li>a]:font-medium border border-base-content"
         >
           
           <li>
@@ -154,16 +154,17 @@
       Work
     </h1>
 
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       
       <div
-        class="bg-[url('/assets/img/work/refu.png')] aspect-square rounded-md"
+        class="aspect-square rounded-md overflow-hidden bg-cover border border-base-content"
+        style="background-image: url('/assets/img/work/refu-square.png');"
       >
         <div
-          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white"
+          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white backdrop-blur-sm"
         >
-          <div>
-            <a href="/work/2023/08/09/responsive-furniture-web.html" class="flex items-center p-3"
+          <div class="[&>a]:justify-center">
+            <a href="/work/2023/08/09/responsive-furniture-web.html" class="flex items-center p-3 underline"
               >Details
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,14 +186,14 @@
             <a
               href="/refu"
               target="_blank"
-              class="flex items-center p-3"
+              class="flex items-center p-3 underline"
             >
               Open
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                class="w-5 h-5 ml-1 mr-3"
+                class="w-5 h-5 ml-1"
               >
                 <path
                   fill-rule="evenodd"
@@ -212,13 +213,14 @@
       </div>
       
       <div
-        class="bg-[url('/assets/img/work/repo.png')] aspect-square rounded-md"
+        class="aspect-square rounded-md overflow-hidden bg-cover border border-base-content"
+        style="background-image: url('/assets/img/work/repo-square.png');"
       >
         <div
-          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white"
+          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white backdrop-blur-sm"
         >
-          <div>
-            <a href="/work/2023/08/08/responsive-portfolio.html" class="flex items-center p-3"
+          <div class="[&>a]:justify-center">
+            <a href="/work/2023/08/08/responsive-portfolio.html" class="flex items-center p-3 underline"
               >Details
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -240,14 +242,14 @@
             <a
               href="/repo"
               target="_blank"
-              class="flex items-center p-3"
+              class="flex items-center p-3 underline"
             >
               Open
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                class="w-5 h-5 ml-1 mr-3"
+                class="w-5 h-5 ml-1"
               >
                 <path
                   fill-rule="evenodd"
@@ -267,13 +269,14 @@
       </div>
       
       <div
-        class="bg-[url('/assets/img/work/bangun-ruang.png')] aspect-square rounded-md"
+        class="aspect-square rounded-md overflow-hidden bg-cover border border-base-content"
+        style="background-image: url('/assets/img/work/bangun-ruang-square.png');"
       >
         <div
-          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white"
+          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white backdrop-blur-sm"
         >
-          <div>
-            <a href="/work/2023/08/05/simple-geometry-calculator.html" class="flex items-center p-3"
+          <div class="[&>a]:justify-center">
+            <a href="/work/2023/08/05/simple-geometry-calculator.html" class="flex items-center p-3 underline"
               >Details
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -295,14 +298,14 @@
             <a
               href="/bangunRuang"
               target="_blank"
-              class="flex items-center p-3"
+              class="flex items-center p-3 underline"
             >
               Open
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                class="w-5 h-5 ml-1 mr-3"
+                class="w-5 h-5 ml-1"
               >
                 <path
                   fill-rule="evenodd"
@@ -322,173 +325,6 @@
       </div>
       
     </div>
-
-    <!-- 
-    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
-      <div class="overflow-hidden rounded-md h-fit">
-        <img
-          src="/assets/img/work/refu.png"
-          alt="image"
-          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
-          onClick="location.href='/work/2023/08/09/responsive-furniture-web.html'"
-        />
-      </div>
-      <div class="md:w-2/3">
-        <a href="/work/2023/08/09/responsive-furniture-web.html" class="hover:text-teal-500">
-          <h2
-            class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
-          >
-            Responsive Furniture Web
-          </h2>
-        </a>
-        <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
-          <span
-            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-            >09 Aug 2023</span
-          >
-
-          
-          <a
-            href="/refu"
-            target="_blank"
-            class="flex items-center"
-          >
-            Open
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 ml-1 mr-3"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
-                clip-rule="evenodd"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-           #TailwindCSS
-        </p>
-        <p>This is a responsive furniture landing page built with Tailwind CSS. Designed by Raditnya Bintang on Figma Community (can be found here). Figma Dev Mode is really helping to turn...</p>
-      </div>
-    </div>
-    <hr />
-    
-    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
-      <div class="overflow-hidden rounded-md h-fit">
-        <img
-          src="/assets/img/work/repo.png"
-          alt="image"
-          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
-          onClick="location.href='/work/2023/08/08/responsive-portfolio.html'"
-        />
-      </div>
-      <div class="md:w-2/3">
-        <a href="/work/2023/08/08/responsive-portfolio.html" class="hover:text-teal-500">
-          <h2
-            class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
-          >
-            Responsive Portfolio
-          </h2>
-        </a>
-        <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
-          <span
-            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-            >08 Aug 2023</span
-          >
-
-          
-          <a
-            href="/repo"
-            target="_blank"
-            class="flex items-center"
-          >
-            Open
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 ml-1 mr-3"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
-                clip-rule="evenodd"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-           #TailwindCSS
-        </p>
-        <p>This is a responsive portfolio landing page built with Tailwind CSS. The design is inspired from one of many excellent designs on dribbble.com. I downloaded the image file, then i...</p>
-      </div>
-    </div>
-    <hr />
-    
-    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4 md:my-12">
-      <div class="overflow-hidden rounded-md h-fit">
-        <img
-          src="/assets/img/work/bangun-ruang.png"
-          alt="image"
-          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
-          onClick="location.href='/work/2023/08/05/simple-geometry-calculator.html'"
-        />
-      </div>
-      <div class="md:w-2/3">
-        <a href="/work/2023/08/05/simple-geometry-calculator.html" class="hover:text-teal-500">
-          <h2
-            class="font-bold text-[24px] md:text-[30px] inline-block capitalize"
-          >
-            Simple Geometry Calculator
-          </h2>
-        </a>
-        <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
-          <span
-            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-            >05 Aug 2023</span
-          >
-
-          
-          <a
-            href="/bangunRuang"
-            target="_blank"
-            class="flex items-center"
-          >
-            Open
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 ml-1 mr-3"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
-                clip-rule="evenodd"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-           #Javascript
-        </p>
-        <p>This is just a simple app to to calculate the volume and area of ​​a geometry. For now, the geometries are just right circular cone, sphere, right circular cylinder, cube,...</p>
-      </div>
-    </div>
-    <hr />
-     -->
   </div>
 </section>
 
@@ -632,7 +468,8 @@
   const fixedNav = header.offsetTop;
 
   if (window.scrollY > fixedNav) {
-    header.classList.add(["shadow-lg"]);
+    header.classList.add(["border-b"]);
+    header.classList.add(["border-b-base-content"]);
   }
 
   window.onscroll = function () {
@@ -640,9 +477,11 @@
     const fixedNav = header.offsetTop;
 
     if (window.scrollY > fixedNav) {
-      header.classList.add(["shadow-lg"]);
+      header.classList.add(["border-b"]);
+      header.classList.add(["border-b-base-content"]);
     } else {
-      header.classList.remove(["shadow-lg"]);
+      header.classList.remove(["border-b"]);
+      header.classList.remove(["border-b-base-content"]);
     }
   };
 

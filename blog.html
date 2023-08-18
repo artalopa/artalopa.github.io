@@ -105,7 +105,7 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 [&>li>a]:font-medium"
+          class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 [&>li>a]:font-medium border border-base-content"
         >
           
           <li>
@@ -170,7 +170,7 @@
       </p>
       <p>I’m excited to share that my new portfolio website is up and running, and it’s proudly built with Jekyll! Jekyll is a fantastic static site generator that has empowered me...</p>
     </div>
-    <hr />
+    <div class="border-b border-b-base-content"></div>
     
   </div>
 </section>
@@ -315,7 +315,8 @@
   const fixedNav = header.offsetTop;
 
   if (window.scrollY > fixedNav) {
-    header.classList.add(["shadow-lg"]);
+    header.classList.add(["border-b"]);
+    header.classList.add(["border-b-base-content"]);
   }
 
   window.onscroll = function () {
@@ -323,9 +324,11 @@
     const fixedNav = header.offsetTop;
 
     if (window.scrollY > fixedNav) {
-      header.classList.add(["shadow-lg"]);
+      header.classList.add(["border-b"]);
+      header.classList.add(["border-b-base-content"]);
     } else {
-      header.classList.remove(["shadow-lg"]);
+      header.classList.remove(["border-b"]);
+      header.classList.remove(["border-b-base-content"]);
     }
   };
 
