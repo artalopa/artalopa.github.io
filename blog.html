@@ -25,7 +25,7 @@ title: Blog
       </p>
       <p>{{ post.content | markdownify | strip_html | truncatewords: 30 }}</p>
     </div>
-    <hr />
+    <div class="border-b border-b-base-content"></div>
     {% endfor %}
   </div>
 </section>

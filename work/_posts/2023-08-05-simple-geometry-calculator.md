@@ -2,6 +2,7 @@
 layout: post
 tags: Javascript
 image: bangun-ruang.png
+cover: bangun-ruang-square.png
 projectLink: /bangunRuang
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 tags: TailwindCSS
 image: repo.png
+cover: repo-square.png
 projectLink: /repo
 ---
 

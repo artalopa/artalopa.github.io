@@ -2,6 +2,7 @@
 layout: post
 tags: TailwindCSS
 image: refu.png
+cover: refu-square.png
 projectLink: /refu
 ---
 

@@ -85,7 +85,8 @@
   const fixedNav = header.offsetTop;
 
   if (window.scrollY > fixedNav) {
-    header.classList.add(["shadow-lg"]);
+    header.classList.add(["border-b"]);
+    header.classList.add(["border-b-base-content"]);
   }
 
   window.onscroll = function () {
@@ -93,9 +94,11 @@
     const fixedNav = header.offsetTop;
 
     if (window.scrollY > fixedNav) {
-      header.classList.add(["shadow-lg"]);
+      header.classList.add(["border-b"]);
+      header.classList.add(["border-b-base-content"]);
     } else {
-      header.classList.remove(["shadow-lg"]);
+      header.classList.remove(["border-b"]);
+      header.classList.remove(["border-b-base-content"]);
     }
   };
 

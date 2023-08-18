@@ -67,7 +67,7 @@ title: Portfolio
     </div>
     <div class="md:w-5/12">
       <img
-        class="w-[170px] md:w-[247px] mx-auto md:mx-0 md:float-right my-11 md:my-0 rounded-full"
+        class="w-[170px] md:w-[247px] mx-auto md:mx-0 md:float-right my-11 md:my-0 rounded-full border border-base-content"
         src="./assets/img/pp.png"
         alt="photo"
       />
@@ -77,7 +77,10 @@ title: Portfolio
 <!-- Header end -->
 
 <!-- Blog -->
-<section id="blog" class="bg-base-200 pt-7 pb-10">
+<section
+  id="blog"
+  class="bg-base-200 pt-7 pb-10 border-y border-y-base-content"
+>
   <div class="container mx-auto lg:px-36 xl:px-44">
     <div class="mx-3 xl:mx-auto max-w-3xl">
       <div class="flex justify-evenly md:justify-between pb-5">
@@ -91,7 +94,9 @@ title: Portfolio
       <div class="flex flex-wrap md:flex-nowrap gap-5">
         {% for post in site.categories.blog %} {% if forloop.index0 == 2 %} {%
         break %} {% endif %}
-        <div class="p-6 bg-base-100 rounded-md shadow-md">
+        <div
+          class="p-6 bg-base-100 rounded-md shadow-md border border-base-content"
+        >
           <a href="{{ post.url }}" class="hover:text-teal-500">
             <h3 class="font-bold text-[22px] md:text-[26px] inline-block">
               {{ post.title }}
@@ -118,72 +123,74 @@ title: Portfolio
 <!-- Work -->
 <section id="work" class="container mx-auto lg:px-36 xl:px-44 pt-7 pb-24">
   <div class="mx-3 xl:mx-auto max-w-3xl">
-    <h2
-      class="text-center md:text-left text-[18px] md:text-[22px] font-medium pb-3"
-    >
-      Featured works
-    </h2>
-
-    {% for post in site.categories.work %} {% if forloop.index0 == 3 %} {% break
-    %} {% endif %}
-    <div class="flex flex-wrap md:flex-nowrap gap-5 w-full my-4">
-      <div class="overflow-hidden rounded-md h-fit">
-        <img
-          src="/assets/img/work/{{ post.image }}"
-          alt="image"
-          class="w-full md:w-[248px] md:h-[180px] object-cover cursor-pointer hover:scale-110 transition"
-          onClick="location.href='{{ post.url }}'"
-        />
-      </div>
-      <div class="md:w-2/3">
-        <a href="{{ post.url }}" class="hover:text-teal-500">
-          <h3 class="font-bold text-[24px] md:text-[30px]">{{ post.title }}</h3>
-        </a>
-        <p class="text-[#8695A4] mt-5 mb-3 [&>*]:mb-3 flex flex-wrap">
-          <span
-            class="post-date h-fit px-3 bg-base-content rounded-full font-bold text-base-100 mr-3 hidden"
-            >{{ post.date | date_to_string }}</span
-          >
-
-          {% if post.projectLink %}
-          <a
-            href="{{ post.projectLink }}"
-            target="_blank"
-            class="flex items-center"
-          >
-            Open
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-5 h-5 ml-1 mr-3"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
-                clip-rule="evenodd"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-          {% endif %} #{{ post.tags | array_to_sentence_string }}
-        </p>
-        <p>{{ post.content | markdownify | strip_html | truncatewords: 30 }}</p>
-      </div>
-    </div>
-    <hr />
-    {% endfor %}
-
-    <div class="text-center">
+    <div class="flex justify-evenly md:justify-between pb-5">
+      <h2 class="text-[18px] md:text-[22px] font-medium">Featured works</h2>
       <a
-        class="btn bg-teal-500 hover:bg-teal-600 text-base-100 capitalize my-7"
         href="/work.html"
+        class="text-teal-500 hover:text-teal-600 font-medium hover:font-bold transition"
         >View all</a
       >
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      {% for post in site.categories.work %} {% if forloop.index0 == 4 %} {%
+      break %} {% endif %}
+      <div
+        class="aspect-square rounded-md overflow-hidden bg-cover border border-base-content"
+        style="background-image: url('/assets/img/work/{{ post.cover }}');"
+      >
+        <div
+          class="w-full h-full opacity-0 hover:opacity-100 transition flex justify-center items-center bg-slate-950 bg-opacity-75 text-white backdrop-blur-sm"
+        >
+          <div class="[&>a]:justify-center">
+            <a href="{{ post.url }}" class="flex items-center p-3 underline"
+              >Details
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5 ml-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                />
+              </svg>
+            </a>
+
+            {% if post.projectLink %}
+            <a
+              href="{{ post.projectLink }}"
+              target="_blank"
+              class="flex items-center p-3 underline"
+            >
+              Open
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 ml-1"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
