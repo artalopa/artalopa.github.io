@@ -154,10 +154,12 @@
     class="flex flex-col-reverse md:flex-row justify-center md:my-36 mx-3 xl:mx-auto max-w-3xl"
   >
     <div class="text-center md:text-left md:w-7/12">
-      <h1 class="text-[32px] md:text-[44px] font-bold">
-        Hi, I am Ryan,<br />
-        Web Developer
-      </h1>
+      <div class="container">
+        <h1 class="text-[32px] md:text-[44px] font-bold">
+          Hi, I am Ryan,<br />
+          a <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </h1>
+      </div>
       <p class="mt-5 mb-9 mx-3 md:mt-10 md:mb-12 md:mx-0">
         I love creating web layouts using HTML5, CSS3, TailwindCSS, Bootstrap
         and JavaScript. I convert a web design into a web page, such as landing
@@ -611,6 +613,53 @@
   // contact link (scroll to footer)
   $("ul.menu > li:last-child").click(function () {
     document.getElementById("footer").scrollIntoView();
+  });
+
+  // typing animation
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+
+  const textArray = ["Student", "Web Developer"];
+  const typingDelay = 100;
+  const erasingDelay = 100;
+  const newTextDelay = 2000; // Delay between current and next text
+  let textArrayIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if (!cursorSpan.classList.contains("typing"))
+        cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      if (!cursorSpan.classList.contains("typing"))
+        cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(
+        0,
+        charIndex - 1
+      );
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // On DOM Load initiate the effect
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
   });
 
   // post date on detailed post page
