@@ -28,13 +28,28 @@
 >
   <div class="navbar container mx-auto max-w-5xl">
     <div class="navbar-start">
-      <a href="/" class="text-2xl font-extrabold ml-4"
-        ><img src="/assets/img/a-logo.png" alt="" class="w-8"
-      /></a>
+      <a href="/" class="text-2xl font-extrabold ml-4">
+        <svg
+          class="[&>path]:fill-base-content scale-90"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path d="M0 4.70588H4.70588V32H0V4.70588Z" />
+          <path d="M27.2941 4.70588H32V27.2941H27.2941V4.70588Z" />
+          <path d="M4.70588 4.70588V0H27.2941V4.70588H4.70588Z" />
+          <path d="M16 32V27.2941H27.2941V32H16Z" />
+          <path d="M16 16V11.2941H27.2941V16H16Z" />
+          <path d="M11.2941 16H16V27.2941H11.2941V16Z" />
+        </svg>
+      </a>
     </div>
     <div class="navbar-end lg:flex-row-reverse lg:justify-start">
       <button
         class="pl-2"
+        id="theme-toggle"
         type="button"
         data-theme-toggle
         aria-label="Change to light theme"
@@ -220,8 +235,16 @@
   // post content css
   var p = $("#post-content p");
   var img = $("#post-content img");
+  var h2 = $("h2");
   p.addClass("my-5");
-  img.addClass(["rounded-md", "mx-auto", "w-full", "max-w-3xl"]);
+  img.addClass([
+    "rounded-md",
+    "mx-auto",
+    "w-full",
+    "max-w-3xl",
+    "gallery-cover",
+  ]);
+  h2.addClass("font-semibold");
 </script>
 
 
@@ -321,6 +344,14 @@
     document.querySelector("html").setAttribute("data-theme", theme);
   }
 
+  function updateGalleryCover({ theme }) {
+    if (theme == "dark") {
+      $(".gallery-cover").addClass("brightness-50");
+    } else {
+      $(".gallery-cover").removeClass("brightness-50");
+    }
+  }
+
   /**
    * On page load:
    */
@@ -345,6 +376,7 @@
    */
   updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
   updateThemeOnHtmlEl({ theme: currentThemeSetting });
+  updateGalleryCover({ theme: currentThemeSetting });
 
   /**
    * 4. Add an event listener to toggle the theme
@@ -355,6 +387,7 @@
     localStorage.setItem("theme", newTheme);
     updateButton({ buttonEl: button, isDark: newTheme === "dark" });
     updateThemeOnHtmlEl({ theme: newTheme });
+    updateGalleryCover({ theme: newTheme });
 
     currentThemeSetting = newTheme;
   });
