@@ -42,6 +42,14 @@
     document.querySelector("html").setAttribute("data-theme", theme);
   }
 
+  function updateGalleryCover({ theme }) {
+    if (theme == "dark") {
+      $(".gallery-cover").addClass("brightness-50");
+    } else {
+      $(".gallery-cover").removeClass("brightness-50");
+    }
+  }
+
   /**
    * On page load:
    */
@@ -66,6 +74,7 @@
    */
   updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
   updateThemeOnHtmlEl({ theme: currentThemeSetting });
+  updateGalleryCover({ theme: currentThemeSetting });
 
   /**
    * 4. Add an event listener to toggle the theme
@@ -76,6 +85,7 @@
     localStorage.setItem("theme", newTheme);
     updateButton({ buttonEl: button, isDark: newTheme === "dark" });
     updateThemeOnHtmlEl({ theme: newTheme });
+    updateGalleryCover({ theme: newTheme });
 
     currentThemeSetting = newTheme;
   });
