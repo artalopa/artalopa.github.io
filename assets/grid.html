@@ -46,7 +46,7 @@
 
       @media screen and (orientation: portrait) {
         .grid {
-          aspect-ratio: 9 / 16;
+          aspect-ratio: 9 / 12;
           grid-template: 1fr 1fr 1fr / 1fr;
         }
 
@@ -60,6 +60,10 @@
 
         .grid:has(> :nth-child(3n - 2):hover) {
           grid-template: 2fr 1fr 1fr / 1fr;
+        }
+
+        #toggleBtn {
+        top: 40px;
         }
       }
 
@@ -139,7 +143,7 @@
         }
       }
 
-      button#toggleBtn {
+      #toggleBtn {
         position: fixed;
         bottom: 20px;
         padding: 10px 20px;
@@ -151,7 +155,7 @@
         border: 2px solid white;
       }
 
-      button#toggleBtn:hover {
+      #toggleBtn:hover {
         opacity: 1;
       }
     </style>
